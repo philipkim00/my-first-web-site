@@ -4,61 +4,110 @@
     <title> 야마의 개별주식</title>
     <meta charset="utf-8">
     <style>
-          #active {
+      #active {
         color:red;
-          }
-          .saw {
-        color:gray;
-          }
+      }
       a {
-        color:skyblue;
+        color:black;
         text-decoration: none;
       }
       h1 {
         font-size: 60px;
         text-align: center;
+        border-bottom:1px solid gray;
+        margin:0;
+        padding:20px;
       }
+      #grid ol {
+        border-right:1px solid gray;
+        width:100px;
+        margin:0;
+        padding:20px;
+        padding-left:33px;
+      }
+      body {
+        margin:0;
+      }
+      #grid {
+        display:grid;
+        grid-template-columns:150px 1fr;
+      }
+      #grid #article {
+        padding-left: 25px;
+      }
+      @media(max-width:700px) {
+        #grid {
+        display: block;
+      }
+      #grid ol {
+        border-right:none;
+      }
+        h1 {
+        border-bottom: none;
+      }
+    }
+    table {
+      margin:auto;
+      width:1000px;
+    }
+table, td, th {
+    border-collapse : collapse;
+    border : 1px solid black;
+    }
+h3 {
+      border-top:1px solid gray;
+      margin:0;
+      text-align: center;
+    }
+    p {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
     </style>
   </head>
   <body>
     <h1><a href="index.html">미국주식</a></h1>
-    <ol>
-      <li><a href="1.html" class="saw" id="active">개별주식</a></li>
-      <li><a href="2.html" class="saw">ETF</a></li>
-      <li><a href="3.html">ETN</a></li>
-    </ol>
-    <h2>개별주식</h2>
-    <h2>내가 가지고있는 <strong>개별주식</strong> 정리</h2>
-    <img src="이항 216.jpg" width="25%">
-    <h3><strong>1.<a href="https://www.ehang.com/index/" target="_blank" title="이항홈페이지"><u>이항</u></a></strong></h3>
-    <p>(1)이항은 나스닥에 상장이 되있다.
-    <br>(2)이항은 중국주식이다.
-    <br>(3)EH216이 곧 형식증명과 감항인증을 받는다.</p>
-    <img src="VT30.jpg" width="25%">
-    <p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/I7mMS6Ir7qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
-<p>
-      <h3>보유비중</h3>
-      <table>
-      <tr>
-        <td>이항</td>
-        <td>79.14%</td>
-      </tr>
-      <tr>
-        <td>bulz</td>
-        <td>10.68%</td>
-      </tr>
-      <tr>
-        <td>soxl</td>
-        <td>7.81%</td>
-      </tr>
-      <tr>
-        <td>qld</td>
-        <td>2.39%</td>
-      </tr>
-      </table>
-    </p>
+    <div id="grid">
+      <ol>
+        <li><a href="1.html" id="active">개별주식</a></li>
+        <li><a href="2.html">ETF</a></li>
+        <li><a href="3.html">ETN</a></li>
+      </ol>
+      <div id="article"
+        <h2>개별주식</h2>
+        <h2>내가 가지고있는 <strong>개별주식</strong> 정리</h2>
+        <img src="이항 216.jpg" width="25%">
+        <h2><strong>1.<a href="https://www.ehang.com/index/" target="_blank" title="이항홈페이지"><u>이항</u></a></strong></h2>
+        <p>(1)이항은 나스닥에 상장이 되있다.
+        <br>(2)이항은 중국주식이다.
+        <br>(3)EH216이 곧 형식증명과 감항인증을 받는다.</p>
+        <img src="VT30.jpg" width="25%">
+        <p>
+          <iframe width="500" height="315" src="https://www.youtube.com/embed/I7mMS6Ir7qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+      </div>
+    </div>
+      <p>
+        <h3>보유비중</h3>
+        <table>
+        <tr>
+          <td>이항</td>
+          <td>79.14%</td>
+        </tr>
+        <tr>
+          <td>bulz</td>
+          <td>10.68%</td>
+        </tr>
+        <tr>
+          <td>soxl</td>
+          <td>7.81%</td>
+        </tr>
+        <tr>
+          <td>qld</td>
+          <td>2.39%</td>
+        </tr>
+        </table>
+      </p>
     <p>
       <div id="disqus_thread"></div>
       <script>

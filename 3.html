@@ -4,12 +4,9 @@
     <title> 야마의 ETN</title>
     <meta charset="utf-8">
     <style>
-          #active {
+      #active {
         color:red;
-          }
-          .saw {
-        color:gray;
-          }
+      }
       a {
         color:black;
         text-decoration: none;
@@ -17,31 +14,78 @@
       h1 {
         font-size: 60px;
         text-align: center;
+        border-bottom:1px solid gray;
+        margin:0;
+        padding:20px;
       }
+      #grid ol {
+        border-right:1px solid gray;
+        width:100px;
+        margin:0;
+        padding:20px;
+        padding-left:33px;
+      }
+      body {
+        margin:0;
+      }
+      #grid {
+        display:grid;
+        grid-template-columns:150px 1fr;
+      }
+      #grid #article {
+        padding-left: 25px;
+      }
+      @media(max-width:700px) {
+        #grid {
+        display: block;
+      }
+      #grid ol {
+        border-right:none;
+      }
+        h1 {
+        border-bottom: none;
+      }
+    }
+    table {
+      margin:auto;
+      width:1000px;
+    }
+table, td, th {
+    border-collapse : collapse;
+    border : 1px solid black;
+}
+h3 {
+      border-top:1px solid gray;
+      margin:0;
+      text-align: center;
+    }
     </style>
   </head>
   <body>
     <h1><a href="index.html">미국주식</a></h1>
-    <ol>
-      <li><a href="1.html" class="saw">개별주식</a></li>
-      <li><a href="2.html" class="saw">ETF</a></li>
-      <li><a href="3.html" id="active">ETN</a></li>
-    </ol>
-    <h2>ETN</h2>
-    <h2>내가 가지고있는 <strong>ETN</strong> 정리</h2>
-    <img src="다람쥐.jpg" width="25%">
-    <h2><strong>ETN</strong></h2>
-      <h3>1.<a href="https://www.bmoetns.com/ETN/BULZ.P/" target="_blank" title="MicroSectors FANG & Innovation 3X Leveraged ETNs">bulz</a></h3>
-      <p style="margin-top:10px;">(1) 미국 15개를 모아둔 3배 레버리지이다.
-      <br>(2) ETN이다.
-      <br>(3) 15개 기업의 종류(애플,어도비,AMD,아마존,세일즈포스,메타,구글,
-                          인텔,마소,마이크론,넷플릭스,엔비디아,스퀘어,테슬라)</p>
-      <p><h3>2.<a href="https://www.direxion.com/product/daily-semiconductor-bull-bear-3x-etfs" target="_blank" title="The Direxion Daily Semiconductor Bull (SOXL)long x3">soxl</a></h3>
-      (1)반도체 3배 레버리지이다.</p>
-      <p><h3>3.<a href="https://www.proshares.com/our-etfs/leveraged-and-inverse/qld/" target="_blank" title="QLD
-Ultra QQQ">qld</a></h3>
-      (1)나스닥 100을 추종하는 QQQ의2배</p>
-
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">개별주식</a></li>
+        <li><a href="2.html">ETF</a></li>
+        <li><a href="3.html" id="active">ETN</a></li>
+      </ol>
+      <div id="article">
+      <h2>ETN</h2>
+      <h2>내가 가지고있는 <strong>ETN</strong> 정리</h2>
+      <img src="다람쥐.jpg" width="25%">
+      <h2><strong>ETN</strong></h2>
+        <h2>1.<a href="https://www.bmoetns.com/ETN/BULZ.P/" target="_blank" title="MicroSectors FANG & Innovation 3X Leveraged ETNs">bulz</a></h2>
+        <p style="margin-top:10px;">(1) 미국 15개를 모아둔 3배 레버리지이다.
+        <br>(2) ETN이다.
+        <br>(3) 15개 기업의 종류(애플,어도비,AMD,아마존,세일즈포스,메타,구글,
+                            인텔,마소,마이크론,넷플릭스,엔비디아,스퀘어,테슬라)</p>
+        <p><h2>2.<a href="https://www.direxion.com/product/daily-semiconductor-bull-bear-3x-etfs" target="_blank" title="The Direxion Daily Semiconductor Bull (SOXL)long x3">soxl</a></h2>
+        (1)반도체 3배 레버리지이다.</p>
+        <p><h2>3.<a href="https://www.proshares.com/our-etfs/leveraged-and-inverse/qld/" target="_blank" title="QLD
+  Ultra QQQ">qld</a></h2>
+        (1)나스닥 100을 추종하는 QQQ의2배</p>
+        </div>
+    </div>
     <h3>보유비중</h3>
     <table>
     <tr>
